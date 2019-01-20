@@ -23,5 +23,8 @@ deploy:
   api_key: $GH_KEY
   file: build/Test*
   skip_cleanup: true
+  branches:
+    only:
+      - $TRAVIS_TAG
   #on:
   #  tags: true
