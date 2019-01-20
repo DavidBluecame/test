@@ -30,3 +30,7 @@ deploy:
         - master # ← new!
   #on:
   #  tags: true
+  
+  after_deploy:
+    - ls -lha
+    - find .
