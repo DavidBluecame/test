@@ -10,11 +10,16 @@ before_script:
     - cmake ..
 
 script: cmake --build .
-
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "DavidBluecame"
+  - git config --local user.email "david.bluecame@gmail.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key: $GH_KEY
   file: Test*
   skip_cleanup: true
-  on:
-    tags: true
+  #on:
+  #  tags: true
