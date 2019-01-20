@@ -19,7 +19,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GH_KEY
-  file: Test*
+  file: build/Test*
   skip_cleanup: true
   #on:
   #  tags: true
