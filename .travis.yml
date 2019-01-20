@@ -29,7 +29,7 @@ deploy:
       only:      # ← new!
         - master # ← new!
   #on:
-  #  tags: true
+  #  tags: true 
   
   after_deploy:
     - ls -lha
