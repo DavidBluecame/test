@@ -24,6 +24,9 @@ deploy:
   file: build/Test*
   skip_cleanup: true
   on:
-  - branch: master
+  #  repo: my-org/my-repo
+    branches:    # ← new!
+      only:      # ← new!
+        - master # ← new!
   #on:
   #  tags: true
