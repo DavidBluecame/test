@@ -21,7 +21,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GH_KEY
-  file: ./*
+  file: ./Test1*
   skip_cleanup: true
   on:
   #  repo: my-org/my-repo
