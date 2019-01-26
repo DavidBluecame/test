@@ -2,7 +2,7 @@ language: cpp
 os: 
   - linux
 #  - windows
-#  - osx
+  - osx
 
 before_script:  
     - mkdir build
