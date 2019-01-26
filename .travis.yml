@@ -10,7 +10,7 @@ before_script:
     - cmake ..
 
 script:
-     - devenv Test1.sln /build
+     - devenv.exe Test1.sln /build
 #    - cmake --build .
 #    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
 #    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
