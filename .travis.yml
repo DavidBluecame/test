@@ -10,9 +10,9 @@ before_script:
     - cmake ..
 
 script:
-    - cmake --build ..
+    - cmake --build .
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
-    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
+    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
 
 #before_deploy:
