@@ -9,7 +9,11 @@ before_script:
     - cd build
     - cmake ..
 
-script: cmake --build .
+script:
+    - cmake --build .
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
 
 #before_deploy:
 #  # Set up git user name and tag this commit
@@ -18,9 +22,9 @@ script: cmake --build .
 #  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
 #  - git tag $TRAVIS_TAG
 
-before_install:
-  - mv Test1 Test1-"$TRAVIS_OS_NAME"
-  - mv Test1.exe Test1-"$TRAVIS_OS_NAME".exe
+#before_install:
+#  - mv Test1 Test1-"$TRAVIS_OS_NAME"
+#  - mv Test1.exe Test1-"$TRAVIS_OS_NAME".exe
 
 deploy:
   provider: releases
