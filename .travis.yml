@@ -10,7 +10,7 @@ before_script:
     - cmake ..
 
 script:
-     - msbuild.exe Test1.sln /p:Configuration=Debug /p:Platform="Win32"
+     - xbuild Test1.sln /p:Configuration=Debug /p:Platform="Win32"
 #    - cmake --build .
 #    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
 #    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
