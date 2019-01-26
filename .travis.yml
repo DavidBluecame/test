@@ -11,9 +11,9 @@ before_script:
 
 script:
     - cmake --build .
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
-    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
+#    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
+#    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
+#    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
 
 #before_deploy:
 #  # Set up git user name and tag this commit
@@ -26,17 +26,17 @@ script:
 #  - mv Test1 Test1-"$TRAVIS_OS_NAME"
 #  - mv Test1.exe Test1-"$TRAVIS_OS_NAME".exe
 
-deploy:
-  provider: releases
-  api_key: $GH_KEY
-  file_glob: true
-  file: ./Test1*
-  skip_cleanup: true
+#deploy:
+#  provider: releases
+#  api_key: $GH_KEY
+#  file_glob: true
+#  file: ./Test1*
+#  skip_cleanup: true
   #on:
   #  repo: my-org/my-repo
   #  branches:    # ← new!
   #    only:      # ← new!
   #      - master # ← new!
-  on:
-    tags: true
+#  on:
+#    tags: true
 
