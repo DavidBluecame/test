@@ -1,7 +1,7 @@
 language: cpp
 os: 
   - linux
-#  - windows
+  - windows
   - osx
 
 before_script:  
@@ -21,7 +21,8 @@ script: cmake --build .
 deploy:
   provider: releases
   api_key: $GH_KEY
-  file: ./Test1
+  file_glob: true
+  file: ./Test1*
   skip_cleanup: true
   #on:
   #  repo: my-org/my-repo
