@@ -1,10 +1,10 @@
 language: cpp
 os: 
   - linux
-    dist: xenial
   - windows
   - osx
 
+dist: xenial
 
 cache:
   directories:
