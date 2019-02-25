@@ -1,10 +1,10 @@
 language: cpp
 os: 
   - linux
-#  - windows
-#  - osx
+    dist: xenial
+  - windows
+  - osx
 
-dist: xenial
 
 cache:
   directories:
@@ -22,9 +22,9 @@ script:
 #    - export PATH=$MSBUILD_PATH:$PATH
 #    - msbuild.exe Test1.sln /p:Configuration=Debug /p:Platform="Win32"
     - cmake --build .
-#    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
-#    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
-#    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME" ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then copy Debug\\Test1.exe Test1-"$TRAVIS_OS_NAME".exe; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cp Test1 Test1-"$TRAVIS_OS_NAME"; fi
 
 #before_deploy:
 #  # Set up git user name and tag this commit
