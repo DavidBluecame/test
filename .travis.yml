@@ -5,9 +5,9 @@ compiler:
   - gcc
 
 addons:
-  - apt:
-      - update: true
-      - packages:
+    apt:
+      update: false
+      packages:
         - libopencv-dev
         - libopencv-imgproc-dev
         - libopencv-photo-dev
