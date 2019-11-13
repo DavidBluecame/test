@@ -1,3 +1,4 @@
+dist: xenial
 language: cpp
 
 compiler:
@@ -6,10 +7,17 @@ compiler:
 addons:
   apt:
     packages:
-    - boost
-    - opencv
-    - libxml2
-    - freetype
+    - libopencv-imgproc-dev
+    - libopencv-photo-dev
+    - libboost-filesystem-dev
+    - libboost-serialization-dev
+    - libboost-locale-dev
+    - libxml2-dev
+    - libfreetype6-dev
+    - libpng-dev
+    - libjpeg-dev
+    - libtiff-dev
+    - libopenexr-dev
 
 before_script:
   # create a build folder for the out-of-source build
