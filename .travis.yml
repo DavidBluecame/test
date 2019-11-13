@@ -23,6 +23,8 @@ addons:
         - libopenexr-dev
         - libpython3-dev
         - ruby-dev
+        - libruby
+        - ruby-all-dev
         - swig
         - qtbase5-dev
         - qtdeclarative5-dev
@@ -33,7 +35,16 @@ addons:
 before_script:
   - mkdir build
   - cd build
-  - cmake .. -DWITH_QT=1 -DWITH_YAF_RUBY_BINDINGS=1
+  - cmake .. -DWITH_QT=1  #-DWITH_YAF_RUBY_BINDINGS=1
 
 script:
   - make
+
+deploy:
+  provider: releases
+  api_key:
+    - secure: "cr7K4qytEzNiApC7zDhwcU1p38P0JuDbc7Fj6UlDsMZbOG78eYPbQ8sm5KBD9HgMkR8Ls/Mt9YbFfNr3CC0UNZ7GyXIfbOa/YJfDbZ3Ekmcjz/mCSdle9ClLD1kpnOX6X3U3zX5pTinFBGvc+qKJnElfqmRqwnhK0PcXZqiJ4cm1B1In9Ivgabqoiab/kqmbgrtlRKCySNaxyJGIYPrSktyqp9QbIVzuxlYSt2EyeIarEQaCEvS1GNNXz12yoc3EjUhU6aky8EyKrid5PUxF2Xm+FAZqVcsAKiAvIm3z2oZCj1bSyRNVxzBns6c3uFE+An4fYKQDx7DZ+9qLeKRYZkKgl56vdwXwGFNetW67WEdZLF9lJV51jbdsz/MoLTi1LeyPE5yE333obYGpsDQB+aE1nZ1tDNgDRTqX4cNpRyfedL8ybT+9G5YxGC54w0SZtESG6cMZZ4IwdmZR+ifWdSQBXROEIwljSXI0cS+6rFuMjLoqiHyGqb5vWqNOkZdMzlCmp9Umw4dU1Xrl+DCNWbLbRdA6Gkmt0z2wyG1qY5lH6bIwN4sHbBEU/1qNWln2O3VsE0ejszlesIwqI9XFfTnsCsYnqpqNW4DajthrIghSVfwh/rS9FRY6+Sd2tWlZoGmDZZoCLhMYQX3un6gzaAgEZUeFlv6KTv6cxSAYvC8="
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true
