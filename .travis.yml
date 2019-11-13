@@ -23,6 +23,8 @@ addons:
         - libpython3-dev
         - ruby-dev
         - swig
+        - qtbase5-dev
+        - qtdeclarative5-dev
         - libqt5core5a
         - libqt5gui5
         - libqt5widgets5
