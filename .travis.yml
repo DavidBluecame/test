@@ -25,6 +25,7 @@ addons:
         - swig
         - libqt5core5a
         - libqt5gui5
+        - libqt5widgets5
 
 before_script:
   - mkdir build

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/DavidBluecame/Core.svg?branch=master)](https://travis-ci.com/DavidBluecame/Core)
+
 DESCRIPTION
 -----------
 YafaRay is a free open-source montecarlo raytracing engine released under the LGPL 2.1 license. Raytracing is a rendering technique for generating realistic images by tracing the path of light through a 3D scene. 
