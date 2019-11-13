@@ -23,7 +23,8 @@ addons:
         - libpython3-dev
         - ruby-dev
         - swig
-        - qt-dev
+        - libqt5core5a
+        - libqt5gui5
 
 before_script:
   - mkdir build
