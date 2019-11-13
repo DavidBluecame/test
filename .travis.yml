@@ -19,6 +19,9 @@ addons:
     - libjpeg-dev
     - libtiff-dev
     - libopenexr-dev
+    - libpython3-dev
+    - ruby-dev
+    - swig
 
 before_script:
   # create a build folder for the out-of-source build
