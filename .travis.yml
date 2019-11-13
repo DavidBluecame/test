@@ -29,7 +29,7 @@ addons:
 before_script:
   - mkdir build
   - cd build
-  - cmake .. -DWITH_QT -DWITH_YAF_RUBY_BINDINGS
+  - cmake .. -DWITH_QT=1 -DWITH_YAF_RUBY_BINDINGS=1
 
 script:
   - make
