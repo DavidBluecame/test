@@ -5,23 +5,24 @@ compiler:
   - gcc
 
 addons:
-  apt:
-    packages:
-    - libopencv-dev
-    - libopencv-imgproc-dev
-    - libopencv-photo-dev
-    - libboost-filesystem-dev
-    - libboost-serialization-dev
-    - libboost-locale-dev
-    - libxml2-dev
-    - libfreetype6-dev
-    - libpng-dev
-    - libjpeg-dev
-    - libtiff-dev
-    - libopenexr-dev
-    - libpython3-dev
-    - ruby-dev
-    - swig
+  - apt:
+      - update: true
+      - packages:
+        - libopencv-dev
+        - libopencv-imgproc-dev
+        - libopencv-photo-dev
+        - libboost-filesystem-dev
+        - libboost-serialization-dev
+        - libboost-locale-dev
+        - libxml2-dev
+        - libfreetype6-dev
+        - libpng-dev
+        - libjpeg-dev
+        - libtiff-dev
+        - libopenexr-dev
+        - libpython3-dev
+        - ruby-dev
+        - swig
 
 before_script:
   # create a build folder for the out-of-source build
