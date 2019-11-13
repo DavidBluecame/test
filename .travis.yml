@@ -7,6 +7,7 @@ compiler:
 addons:
   apt:
     packages:
+    - libopencv-dev
     - libopencv-imgproc-dev
     - libopencv-photo-dev
     - libboost-filesystem-dev
