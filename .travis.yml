@@ -23,16 +23,12 @@ addons:
         - libpython3-dev
         - ruby-dev
         - swig
+        - qt-dev
 
 before_script:
-  # create a build folder for the out-of-source build
   - mkdir build
-  # switch to build directory
   - cd build
-  # run cmake; here we assume that the project's
-  # top-level CMakeLists.txt is located at '..'
-  - cmake ..
+  - cmake .. -DWITH_QT -DWITH_YAF_RUBY_BINDINGS
 
 script:
-  # once CMake has done its job we just build using make as usual
   - make
