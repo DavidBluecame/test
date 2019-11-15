@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/DavidBluecame/Core.svg?branch=ci)](https://travis-ci.com/DavidBluecame/Core)
+[![Build Status](https://travis-ci.com/DavidBluecame/test.svg?branch=ci)](https://travis-ci.com/DavidBluecame/test)
 
 DESCRIPTION
 -----------
