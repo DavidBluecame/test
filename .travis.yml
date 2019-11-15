@@ -1,8 +1,8 @@
 dist: xenial
 language: cpp
-cache:
-    directories:
-      - $HOME/DavidBluecame
+#cache:
+#    directories:
+#      - $HOME/DavidBluecame
 
 compiler:
   - gcc
@@ -24,20 +24,20 @@ addons:
         - libtiff-dev
         - libopenexr-dev
         - libpython3-dev
-        - ruby-dev
-        - libruby
-        - ruby-all-dev
+#        - ruby-dev
+#        - libruby
+#        - ruby-all-dev
         - swig
-        - qtbase5-dev
-        - qtdeclarative5-dev
-        - libqt5core5a
-        - libqt5gui5
-        - libqt5widgets5
+#        - qtbase5-dev
+#        - qtdeclarative5-dev
+#        - libqt5core5a
+#        - libqt5gui5
+#        - libqt5widgets5
 
 before_script:
   - mkdir build
   - cd build
-  - cmake .. -DUSER_INSTALL_PREFIX=~/DavidBluecame/test/built -DWITH_QT=1 -DBLENDER_ADDON=1 #-DWITH_YAF_RUBY_BINDINGS=1
+  - cmake .. -DUSER_INSTALL_PREFIX=~/DavidBluecame/test/built -DBLENDER_ADDON=1 #-DWITH_QT=1 -DWITH_YAF_RUBY_BINDINGS=1
 
 script:
   - make
